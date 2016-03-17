@@ -9,14 +9,15 @@ body {
 }
 
 section {
-    padding-top: 10vh;
     margin: 0;
+    background-color: #BDBEA9;
 }
 
 .section-title h2 {
   color: #404E4D;
   font-size: 3em;
   letter-spacing: 1.9px;
+  padding-top: 10vh;
 }
 
 .column {
@@ -128,6 +129,7 @@ section {
 
 .portfolio-text p {
   font-size: 3.5vw;
+  font-weight: bold;
   text-align: left;
   color: #404E4D;
   margin-left: 5vw;
@@ -138,26 +140,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8vh 5vw 8vh 5vw;
-  background-color: #BEC5AD;
-  margin-top: 2vh;
+  padding: 3vh 4vw 8vh 4vw;
+  background-color: #A67F8E;
+  margin-top: 3vh;
   margin-bottom: 0;
+}
+
+.portfolio-text {
+  padding-bottom: 2vh !important;
 }
 
 .portfolio-item a {
   margin: 0;
 }
-
-
-
-
-div .row .portfolio-smallview {
-  height: 10vh;
-}
-
-
-
-
 
 @media(min-width:768px) {
     #portfolio-container {
@@ -167,6 +162,8 @@ div .row .portfolio-smallview {
     }
     .portfolio-smallview {
       visibility: hidden;
+      height: 0;
+      margin: 0;
     }
     .portfolio-largeview {
       visibility: visible;
@@ -210,8 +207,8 @@ iframe {
   width: 100%;
   height: 10vh;
   position: relative;
-  padding: 10px 10px 10px 10px;
-  margin: 200px 10px 10px 10px;
+  padding: 10vh 3vh 10vh 2vh;
+  margin: 20vh 3vh 10vh 2vh;
   background-color: #404E4D;
   color: #BEC5AD;
   border:none;
