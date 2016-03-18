@@ -10,7 +10,6 @@ body {
 
 section {
     margin: 0;
-    background-color: #BDBEA9;
 }
 
 .section-title h2 {
@@ -48,7 +47,7 @@ a, a:hover, a:active, a:visited {
   width: 80vw;
   max-width: 50%
   height: 30vh;
-  font: 2.5vw 'Oswald', sans-serif;
+  font: 4vw 'Oswald', sans-serif;
   font-weight: 300;
   margin: 0;
   color: #BEC5AD;
@@ -56,7 +55,11 @@ a, a:hover, a:active, a:visited {
   background-color: #D64933;
 }
 
-
+@media(min-width:768px) {
+  #about-text {
+      font-size: 2.5vw;
+  }
+}
 
 
 
@@ -65,7 +68,7 @@ a, a:hover, a:active, a:visited {
 #portfolio-section {
   clear: both;
   padding-bottom: 8%;
-  /*height: 40vh;*/
+  background-color: #A67F8E;
 }
 
 .section-title-row {
@@ -159,15 +162,24 @@ a, a:hover, a:active, a:visited {
   margin-right: 5vw;
 }
 
+
+.portfolio-card {
+  border: 3px solid #404E4D;
+  margin: 3vh 0 0 0;
+  padding: 0;
+}
+
+
 .portfolio-smallview {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3vh 4vw 8vh 4vw;
   background-color: #A67F8E;
-  margin-top: 3vh;
+  /*margin-top: 3vh;*/
   margin-bottom: 0;
 }
+
 
 .portfolio-text {
   padding-bottom: 2vh !important;
@@ -193,6 +205,12 @@ a, a:hover, a:active, a:visited {
     }
     #portfolio-section h2 {
       font-weight: bold;
+    }
+    .portfolio-card {
+      visibility: hidden;
+      height: 0;
+      margin: 0;
+      padding: 0;
     }
     .portfolio-smallview {
       visibility: hidden;
@@ -222,21 +240,20 @@ a, a:hover, a:active, a:visited {
 
 
 
-/*   lede   */
+/**   LEDE   **/
 
 #lede-text {
   width: 100%;
-  height: 10vh;
-  position: relative;
+  height: 20vh;
   padding: 10vh 3vh 10vh 2vh;
-  margin: 20vh 3vh 10vh 2vh;
+  margin: 20vh 3vh 25vh 2vh;
   background-color: #404E4D;
   color: #BEC5AD;
   border:none;
   text-transform: lowercase;
   text-align: center;
   letter-spacing: 1.5px;
-  font-size: 1.8em;
+  font-size: 8vw;
   font-family: Oswald;
 }
 
@@ -275,13 +292,22 @@ a, a:hover, a:active, a:visited {
 }
 
 .text-column {
-  order: 2;
+  height: 100vh
 }
 
-.pic-column {
-  order: 1;
+@media(min-width:768px) {
+  #lede-section {
+    margin: 5% 0 0 0;
+  }
+  #lede-text {
+    font-size: 2.8vw;
+    margin-bottom: 0vh;
+    height: 70vh;
+  }
+  .text-column {
+    height: auto;
+  }
 }
-
 
 
 /***   navbar  ***/
@@ -373,10 +399,7 @@ a, a:hover, a:active, a:visited {
         margin-left: 30px;
         left: 80px;
     }
-    #lede-section {margin: 5% 0 0 0;}
-    #lede-text {
-      height: 70vh;
-    }
+}
 
 
 .navbar {
@@ -400,44 +423,41 @@ a, a:hover, a:active, a:visited {
 }
 
 
-/*   contact   */
+
+/**   contact   **/
 
 
 #contact-section {
   background-color: #404E4D;
   height: 60vh;
+}
+
+#contact-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+#contact-container > div {
+  flex: 1;
+}
+
+#contact-row {
+  max-width: 50%
+}
+
+#contact-section .section-title {
+  width: 100vw;
 }
 
 #contact-section h2 {
   color: #BEC5AD;
-  margin-bottom: 40px;
-  width: 50vh;
-  max-width: 50%;
-  text-align: center;
 }
-
-#contact-title-row {
-  background-color: #404E4D;
-}
-
-#contact-container {
-  background-color: #404E4D;
-}
-
-/*
-.section-title {
-   max-width: 50%;
-  flex: 1;
-}*/
-
 
 .contact-icon {
   max-width: 100%;
 }
-
 
 .contact-icon { text-align:center; margin:0 auto;  }
 .contact-icon a {
@@ -456,12 +476,6 @@ a, a:hover, a:active, a:visited {
 .contact-icon a:hover {opacity: 1.0; color: #D64933;}
 
 
-@media(min-width:768px) {
-.section-title-row {
-      margin: 8vh 0 8vh 0;
-      background-color: transparent;
-    }
-}
 
 
 /**   FOOTER   **/
